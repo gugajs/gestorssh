@@ -120,7 +120,7 @@ fun_upgrade () {
     apt-get upgrade -y > /dev/null 2>&1
 }
 fun_atpweb () {
-    bash <(wget -qO- raw.githubusercontent.com/gugajs/gestorssh/ntech/gestorssh/attpainel.sh)
+    bash <(wget -qO- raw.githubusercontent.com/gugajs/gestorssh/main/gestorssh/attpainel.sh)
 }
 autoexec () {
    if grep "pweb;" /etc/profile > /dev/null; then
@@ -183,7 +183,7 @@ fun_tst () {
     if [ -e "/usr/bin/speedtest2" ]; then
     speedtest2 --share > speed
     else
-    wget https://github.com/gugajs/gestorssh/raw/ntech/gestorssh/speedtest-cli -O speedtest2
+    wget https://github.com/gugajs/gestorssh/raw/main/gestorssh/speedtest-cli -O speedtest2
     chmod +x speedtest2
     mv speedtest2 /usr/bin/speedtest2
     speedtest2 --share > speed
